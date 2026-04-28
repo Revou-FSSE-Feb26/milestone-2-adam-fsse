@@ -1,0 +1,137 @@
+body, header, main, footer {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    text-align: center;    
+    align-items: center;
+    justify-content: center;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #d753ff;
+    min-height: 100vh;
+    
+    
+    /* background-image: linear-gradient(
+    to left, 
+    rgb(245, 213, 255) 10%, 
+    rgba(255, 255, 255, 0) 70%,
+    rgba(245, 213, 255, 1) 100%
+    ),url('../assets/back.png'); */
+    
+    background-blend-mode: screen;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
+    z-index: 0;
+}
+
+header {
+    background-color: #696969;
+    color: white;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    top: 0;
+    z-index: 10;
+}
+
+main {
+    padding: 20px;
+    margin: 60px 0;
+}
+
+footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+}
+
+h1 {
+    margin: 0;
+}
+
+
+
+/* general button properties */
+button {
+    margin: 10px 0;
+    color: yellow;
+    border: black solid 1px;
+        padding: 10px;
+        width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+
+        transition: all 0.1s;
+        position: relative;
+        outline: none;
+}
+button:hover {
+    text-decoration: underline;
+}
+button:active {
+  transform: translateY(3px);
+}
+
+/* back button properties */
+.back-button {
+        border-radius: 20px;
+        background-color: #0000ff;
+        height: 2.5rem;
+
+        box-shadow: 0 3px #000088; 
+}
+.back-button:hover {
+    background-color: #0000dd;
+}
+.back-button:active {
+  box-shadow: 0 0 #000088;
+}
+
+/* clicker button properties */
+.click-button {
+        border-radius: 50%;
+        background-color: #ff0000;
+        aspect-ratio: 2 / 1.5;
+
+        box-shadow: 0 3px #880000; 
+}
+.click-button:hover {
+    background-color: #dd0000;
+}
+.click-button:active {
+  box-shadow: 0 0 #880000;
+}
+.click-button:disabled {
+    background-color: #888888;
+    color: #cccccc;
+    border-color: #555555;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* reset button properties */
+.reset-button {
+        border-radius: 20px;
+        background-color: #ff0000;
+        height: 2.5rem;
+
+        box-shadow: 0 3px #880000;
+
+        display:none;
+}
+.reset-button:hover {
+    background-color: #dd0000;
+}
+.reset-button:active {
+  box-shadow: 0 0 #000088;
+}
+
+
+

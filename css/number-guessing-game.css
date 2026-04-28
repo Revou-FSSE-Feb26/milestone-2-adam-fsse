@@ -1,0 +1,13 @@
+input {
+    font-size: 2rem;
+    width: 20rem;
+    text-align: center;
+    padding: 10px; 
+    border-radius: 20px;
+    border: 1px solid #ccc;
+}
+
+/* general button properties */
+.click-button {
+        width: 100px;
+}
