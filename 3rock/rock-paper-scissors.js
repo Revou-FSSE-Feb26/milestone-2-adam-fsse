@@ -8,7 +8,7 @@ const images = [
 
 let idInterval;
 
-function starGame() {
+function startGame() {
 idInterval = setInterval(() => {
     // 3. Pick a random index
     const randomIndex = Math.floor(Math.random() * 3);
@@ -17,7 +17,7 @@ randomImage.src = images[randomIndex];
 }, 50);
 }
 
-starGame();
+startGame();
 
 const rockBtn = document.getElementById('rock-btn');
 const paperBtn = document.getElementById('paper-btn');
@@ -55,7 +55,7 @@ scissorsBtn.addEventListener('click', () => {
 });
 
 resetBtn.addEventListener('click', () => {
-    starGame();
+    startGame();
     
     rockBtn.disabled = false;
     paperBtn.disabled = false;
