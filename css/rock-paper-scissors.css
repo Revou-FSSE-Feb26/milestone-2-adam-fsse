@@ -1,0 +1,15 @@
+#random-image {
+    width: 100px;
+    aspect-ratio: 1/1;
+}
+
+.click-button {
+    width: 100px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+
+img {
+    border-radius: 50%;
+    width: 100%;
+}

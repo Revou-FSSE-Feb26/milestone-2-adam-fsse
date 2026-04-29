@@ -5,10 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
     
-    <link rel="stylesheet" href="rock-paper-scissors.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/rock-paper-scissors.css">
     <script defer src="rock-paper-scissors.js"></script>
 </head>
 <body>
+    <header>
+    <h1>Rock Paper Scissors</h1>
+    </header>
+
+    <main>
+        <p>Play a Game of Rock Paper Scissors!</p>
+        <img id="random-image" src="../assets/rock.png" alt="Flickering Image">
+
+        <div id="choices">
+            <button id="rock-btn" class="click-button"><img src="../assets/rock.png" alt="Rock"></button>
+            <button id="paper-btn" class="click-button"><img src="../assets/paper.png" alt="Paper"></button>
+            <button id="scissors-btn" class="click-button"><img src="../assets/scissors.png" alt="Scissors"></button>
+        </div>
+
+        <p id="message"></p>
+        <button id="reset-btn" class="reset-button">Play Again</button>
+    </main>
+    
+    <footer>
+        <a href="../index.html"><button class="back-button">← Back to Main Menu</button></a>
+    </footer>
     
 </body>
 </html>
