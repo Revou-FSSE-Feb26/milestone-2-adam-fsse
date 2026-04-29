@@ -64,6 +64,7 @@ resetBtn.addEventListener('click', () => {
     document.getElementById('message').textContent = '';
 });
 
+// determine winner
 function checkWinner(userChoice, computerChoice) {
     let message = '';
     if (userChoice === computerChoice) {
@@ -77,3 +78,33 @@ function checkWinner(userChoice, computerChoice) {
     }   
     document.getElementById('message').textContent = message;
 }
+
+// prefer switch case..
+// function checkWinner(userChoice, computerChoice) {
+//     const outcome = `${userChoice}-${computerChoice}`;
+//     let message = '';
+
+//     switch (outcome) {
+//         // Tie Cases
+//         case 'rock-rock':
+//         case 'paper-paper':
+//         case 'scissors-scissors':
+//             message = `It's a tie! You both chose ${userChoice}.`;
+//             break;
+        
+//         // Winning Cases
+//         case 'rock-scissors':
+//         case 'paper-rock':
+//         case 'scissors-paper':
+//             message = `You win! ${userChoice} beats ${computerChoice}.`;
+//             break;
+        
+//         // Losing Cases (Default)
+//         default:
+//             message = `You lose! ${computerChoice} beats ${userChoice}.`;
+//             break;
+//     }
+
+//     // Update the DOM (Grading: DOM Manipulation)
+//     document.getElementById('message').textContent = message;
+// }
