@@ -43,33 +43,57 @@ console.log(button);
 
 
 //gives a hint "too high" or "too low", and if it's more than 10 away, it gives a "way too high" or "way too low" hint
+// function hint() {
+//     const userGuess = parseInt(document.getElementById("guessInput").value);
+//     let hintWay = "";
+//     if (userGuess < randomNumber) {
+//         if (userGuess+10 < randomNumber) {
+//             hintWay = "way too low";
+//         } else {
+//             hintWay = "too low";
+//         }
+//         document.getElementById("message").textContent = `You guessed ${userGuess}. It's ${hintWay}! Try a higher number.`;
+    
+//     } else if (userGuess > randomNumber) {
+//         if (userGuess-10 > randomNumber) {
+//             hintWay = "way too high";
+//         } else {
+//             hintWay = "too high";
+//         }
+//         document.getElementById("message").textContent = `You guessed ${userGuess}. It's ${hintWay}! Try a lower number.`;
+//     }
+
+// //debug
+// console.log(hintWay);
+// }
+
+// prefer switch case to determine hint
 function hint() {
     const userGuess = parseInt(document.getElementById("guessInput").value);
+    const diff = userGuess - randomNumber;
     let hintWay = "";
-    if (userGuess < randomNumber) {
-        if (userGuess+10 < randomNumber) {
-            hintWay = "way too low";
-        } else {
-            hintWay = "too low";
-        }
-        document.getElementById("message").textContent = `You guessed ${userGuess}. It's ${hintWay}! Try a higher number.`;
-    
-    } else if (userGuess > randomNumber) {
-        if (userGuess-10 > randomNumber) {
-            hintWay = "way too high";
-        } else {
-            hintWay = "too high";
-        }
-        document.getElementById("message").textContent = `You guessed ${userGuess}. It's ${hintWay}! Try a lower number.`;
-    }
 
-//debug
-console.log(hintWay);
+    switch (true) {
+        // Low Guesses
+        case (diff < -10):
+            hintWay = "way "; // Starts the string
+        case (diff < 0):
+            hintWay += "too low"; // Adds "low" to whatever hintWay currently is
+            document.getElementById("message").textContent = `You guessed ${userGuess}. It's ${hintWay}! Try a higher number.`;
+            break;
+
+        // High Guesses
+        case (diff > 10):
+            hintWay = "way ";
+        case (diff > 0):
+            hintWay += "too high";
+            document.getElementById("message").textContent = `You guessed ${userGuess}. It's ${hintWay}! Try a lower number.`;
+            break;
+    }
 }
 
 // clears the input field when clicked
 const guessInput = document.getElementById("guessInput");
-
 guessInput.addEventListener("click", function() {
     this.value = ""; 
 });
@@ -91,5 +115,4 @@ function resetGame() {
 //debug
 console.log(randomNumber);
 console.log(attempts);
-console.log(userGuess);
 console.log(button);
