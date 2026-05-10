@@ -124,7 +124,7 @@ button:active {
 
         box-shadow: 0 3px #880000;
 
-        display:none;
+        /* display:none; */
 }
 .reset-button:hover {
     background-color: #dd0000;
@@ -133,5 +133,7 @@ button:active {
   box-shadow: 0 0 #000088;
 }
 
-
+.btn-hidden {
+    display: none;
+}
 
