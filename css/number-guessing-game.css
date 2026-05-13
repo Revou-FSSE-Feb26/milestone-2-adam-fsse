@@ -9,5 +9,7 @@ input {
 
 /* general button properties */
 .click-button {
-        width: 100px;
+        width: 130px;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
 }

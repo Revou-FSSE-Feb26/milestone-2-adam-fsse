@@ -4,29 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RevoFun</title>
-
-    
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/index.css">
+    <script defer src="./js/index.js"></script>
 
-    <!-- <audio autoplay loop>
-        <source src="./assets/Cartridge Chill.mp3" type="audio/mpeg">
-    </audio> -->
-
+    <audio autoplay>
+        <source src="./assets/audio/thunder.mp3" type="audio/mpeg">
+    </audio>
 </head>
 <body>
     <header>
         <h1>RevoFun</h1>
     </header>
     <main>
-        <h2>About RevoFun</h2>
-        <p>RevoFun is a simple web application for managing fun activities.</p>
-        <h2>GAMES</h2>
-        <ul>
-            <li><a href="./1clicker/clicker-game.html"><button>Clicker Game</button></a></li>
-            <li><a href="./2number/number-guessing-game.html"><button>Number Guessing Game</button></a></li>
-            <li><a href="./3rock/rock-paper-scissors.html"><button>Rock Paper Scissors</button></a></li>
-        </ul>
+        <section id="hero">
+            <img id="back-img" src="./assets/img/back.png" alt="Background Image" class="background-image">
+        </section>
+        <section id="empty-section">
+            <p id="empty">The fun starts here!</p>
+        </section>
+        <section id="about-section">
+            <h2>About RevoFun</h2>
+            <p id="about">RevoFun is a simple entertainment hub and web application for managing fun activities. It guarantees to instantly cure boredom with its highly addictive mini-games.</p>
+        </section>
+        <section id="games">
+            <h2>THE GAMES</h2>
+            <ul>
+                <li><a href="./pages/clicker-game.html"><img src="./assets/img/click.png" alt="Clicker Game"></a>
+                    <a href="./pages/clicker-game.html"><button>Clicker Game</button></a></li>
+                <li><a href="./pages/number-guessing-game.html"><img src="./assets/img/guess.png" alt="Number Guessing Game"></a>
+                    <a href="./pages/number-guessing-game.html"><button>Number Guessing Game</button></a></li>
+                <li><a href="./pages/rock-paper-scissors.html"><img src="./assets/img/rps.png" alt="Rock Paper Scissors"></a>
+                    <a href="./pages/rock-paper-scissors.html"><button>Rock Paper Scissors</button></a></li>
+            </ul>
+        </section>
     </main>
     <footer>
         <p>&copy; 2026 RevoFun by Adam.</p>

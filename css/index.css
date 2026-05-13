@@ -1,5 +1,5 @@
 footer {
-    background-color: #696969;
+    background-color: rgba(69, 69, 69, 0.85);
     color: white;
     padding: 10px;
     position: fixed;
@@ -15,18 +15,93 @@ h2 {
     color: #333;
 }
 ul {
+    display: flex;
+    flex-direction: row;
     list-style-type: none;
-    padding: 0;
+    margin: 10px;
+    padding: 0px;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+li {
+    border: #b700ff solid 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    background: linear-gradient(135deg, #bd3bf2 0%, #d753ff 50%, #9e1be0 100%);
+
+    box-shadow: 3px 3px #64008b;
+}
+#about {
+    max-width: 600px;
+    margin: 0 auto 20px auto;
+    padding: 0 20px;
+    font-size: 1.2rem;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(12px); 
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+    padding: 24px; 
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow:  3px 3px rgba(0, 0, 0, 0.2);
+
+    text-align: center;
+}
+#hero {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1;
+}
+#back-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 30%;
+    z-index: -1;
+}
+#empty-section {
+    height: 80vh;
+}
+#empty {
+    font-size: 1rem;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+    background: rgb(0, 0, 0);
+    width: 100%;
+    margin-top: 25vh;
+    border-radius: 12px;
+}
+section {
+    margin-bottom: 2rem;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
 button {
-    margin: 10px 0;
+    margin: 0;
     color: yellow;
     border: black solid 1px;
         border-radius: 5px;
         background-color: #ff0000;
-        padding: 10px;
+        padding: 0px;
         width: 200px;
+        height: 2.5rem;
         margin-left: auto;
         margin-right: auto;
 
