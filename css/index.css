@@ -51,7 +51,7 @@ li {
 
     text-align: center;
 }
-#hero {
+#hero-section {
     position: fixed;
     top: 0;
     width: 100%;
@@ -81,6 +81,8 @@ li {
     width: 100%;
     margin-top: 25vh;
     border-radius: 12px;
+    display: flex;
+    justify-content: center;
 }
 section {
     margin-bottom: 2rem;

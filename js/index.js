@@ -1,5 +1,5 @@
 window.addEventListener('scroll', () => {
-    const landing = document.getElementById('hero');
+    const landing = document.getElementById('hero-section');
     const emptySection = document.getElementById('empty-section');
     const scrollPosition = window.scrollY;
     const windowHeight = window.innerHeight;
