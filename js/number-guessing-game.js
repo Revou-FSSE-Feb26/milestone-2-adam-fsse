@@ -9,12 +9,14 @@ button.addEventListener('click', () => {
     const guessInput = document.getElementById("guessInput");
 
     if (isNaN(userGuess) || userGuess < 1 || userGuess > 100) {
+        document.getElementById("message").classList.remove("red-text", "green-text");
         document.getElementById("message").textContent = "Please enter a valid number between 1 and 100!";
         guessInput.value = "";
         return;
     }
 
     if (userGuess === randomNumber) {
+    document.getElementById("message").classList.remove("red-text", "green-text");
     document.getElementById("message").textContent = "Congratulations! You've guessed the number!";
     button.disabled = true;
 
@@ -27,6 +29,7 @@ button.addEventListener('click', () => {
     if (attempts > 0) {
         hint(); 
     } else {
+        document.getElementById("message").classList.remove("red-text", "green-text");
         document.getElementById("message").textContent = `Game over! The number was ${randomNumber}.`;
         button.disabled = true;
         guessInput.disabled = true;
@@ -40,10 +43,14 @@ function hint() {
     const userGuess = parseInt(document.getElementById("guessInput").value);
     const diff = userGuess - randomNumber;
     let hintWay = "";
+    document.getElementById("message").classList.add("green-text");
+    document.getElementById("message").classList.remove("red-text");
 
     switch (true) {
         case (diff < -10):
             hintWay = "way ";
+            document.getElementById("message").classList.add("red-text");
+            document.getElementById("message").classList.remove("green-text");
         case (diff < 0):
             hintWay += "too low";
             document.getElementById("message").textContent = `You guessed ${userGuess}. It's ${hintWay}! Try a higher number.`;
@@ -51,6 +58,8 @@ function hint() {
 
         case (diff > 10):
             hintWay = "way ";
+            document.getElementById("message").classList.add("red-text");
+            document.getElementById("message").classList.remove("green-text");
         case (diff > 0):
             hintWay += "too high";
             document.getElementById("message").textContent = `You guessed ${userGuess}. It's ${hintWay}! Try a lower number.`;
@@ -77,3 +86,4 @@ function resetGame() {
     document.getElementById("attempts").textContent = attempts;
     document.getElementById("guessInput").value = "";
 }
+
